@@ -36,7 +36,8 @@
             email: email, 
             name: fullname, 
             destination: destination, 
-            details: details
+            details: details,
+            gender: "male"
         };
         analytics.identify('1234', {
             email: email, 
@@ -45,7 +46,7 @@
             gender: "male"
         });
         analytics.track('destination submitted', user, function() {
-            window.location.href = "";
+            //window.location.href = "";
         });
       }
 </script>    
