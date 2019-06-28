@@ -79,6 +79,17 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
         code_version: "1.1",
          codeVersion: "1.2"
       })
+        
+        Rollbar.configure({
+          payload: {
+            client: {
+              javascript: {
+                code_version: "ce0227180bd7429fde128f6ef8fad77396d8fbd4"  // Git SHA of your deployed code
+              }
+            }
+          }
+        });
+        
      });
 </script>
     </body> 
