@@ -72,14 +72,14 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
       }
 </script>    
 <script>
-    analytics.ready(function(){
-      Rollbar.options.payload.client.javascript.code_version = "ce0227180bd7429fde128f6ef8fad77396d8fbd4";   
-      drift.config({
+
+    analytics.ready(function () { 
+window._rollbarConfig.codeVersion = 'fdfddfn' 
+              drift.config({
        locale: 'de-DE'
       })
-     });
-analytics.identify('12345',{  name:'Jake Peterson',  email:'jake.peterson@example.com'});
-    sdds();
-</script>
+}); 
+    
+    </script>
     </body> 
 </html>
