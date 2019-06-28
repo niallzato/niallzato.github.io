@@ -73,9 +73,9 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 </script>    
 <script>
     analytics.ready(function(){
-//      drift.config({
-//       locale: 'de-DE'
-//      })
+      drift.config({
+       locale: 'de-DE'
+      })
         Rollbar.options.payload.client.javascript.code_version = "ce0227180bd7429fde128f6ef8fad77396d8fbd4";   
      });
 analytics.identify('12345',{  name:'Jake Peterson',  email:'jake.peterson@example.com'});
