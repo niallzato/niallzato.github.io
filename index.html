@@ -18,7 +18,8 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
   analytics.load('9YlYQqs0rvHp5yLr8foZZGumJLgh8zez', { integrations: { All: true, 'Intercom': false } });
   analytics.page();
   analytics.ready(function() {
-    analytics.user();
+      analytics.user();
+      setTimeout(function(){ analytics.user(); }, 3000);
    });
   }}();
 </script>
