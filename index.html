@@ -40,44 +40,12 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
     <input name="submit" type="submit" value="submit"/>
 </form> 
 <script type="text/javascript">
-      function identify(e){
-        e.preventDefault();
-        var form = e.target;
-        var email = form["email"].value;
-        var fullname = form["fullname"].value;
-        var destination = form["destination"].value;
-        var details = form["details"].value;
-        var user = {
-            email: email, 
-            name: fullname, 
-            destination: destination, 
-            details: details,
-            gender: "male"
-        };
-        analytics.identify('1234', {
-            email: email, 
-            name: fullname,
-            gender: "male"
-        });
-        analytics.track("page load", {
-          region: "emea"
-        });
-        
-        
-        
-        ck('destination submitted', user, function() {
-            //window.location.href = "";
-        });
-      }
   analytics.ready(function() {
-      analytics.user();
-      setTimeout(function(){ 
-          console.log("here2");
-          analytics.user(); 
-      }, 3000);
-   });
-  }}();    
-    
+
+  var user = analytics.user();
+
+
+});
 </script>    
 
     </body> 
