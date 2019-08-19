@@ -27,7 +27,8 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 </head> 
 <body> 
 <h1>What is your favorite place to travel?</h1> 
-<p>I am building a directory of the sweetest travel destinations.</p>  
+<p>I am building a directory of the sweetest travel destinations.</p>
+    <a href="http://www.example.com" onclick="captureOutboundLink('http://www.example.com'); return false;">Check out example.com</a>
 <form name="travel" onsubmit="identify(event)">
      What is your favorite travel destination?
     <input name="destination" required="" size="81" type="text"/> 
@@ -57,7 +58,16 @@ setTimeout(function() {
     analytics.track("tracktest", {name:"stuff"});
     }
     }}();  
-}, 5000);  
+}, 5000);
+    
+var captureOutboundLink = function(url) {
+    analytics.track("redirect delay", {name:"stuff"}, {}, redirect(url));
+}
+   
+var redirect = function(url) {
+    document.location = url;
+}
+    
     </script> 
 
     </body> 
