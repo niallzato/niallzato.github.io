@@ -60,6 +60,10 @@ var redirect = function(url) {
     document.location = url;
 }
     
+analytics.ready(function() {
+  window.Intercom.hide();
+});
+
     </script> 
 
     </body> 
