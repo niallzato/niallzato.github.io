@@ -59,10 +59,16 @@ var captureOutboundLink = function(url) {
 var redirect = function(url) {
     document.location = url;
 }
-    
+var clientId = 5;
+
 analytics.ready(function() {
   window.Intercom('hide');
+    ga(function (tracker) {
+        clientId = tracker.get('clientId');
+    });
 });
+    
+    
 
     </script> 
 
