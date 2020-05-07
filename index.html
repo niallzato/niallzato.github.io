@@ -73,11 +73,16 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
     var cancelDialogTitle = 'Are you sure you want to cancel?'
     var cancelDialogContent =
       'Your preferences have not been saved. By continuing to use our website, you՚re agreeing to our Website Data Collection Policy.'
-
+var closeBehavior={
+  (categories) => ({
+    advertising: false
+  })
+}
+    
     return {
       container: '#target-container',
       writeKey: '9YlYQqs0rvHp5yLr8foZZGumJLgh8zez',
-      closeBehavior: 'accept',
+      closeBehavior: closeBehavior,
       bannerContent: bannerContent,
       bannerSubContent: bannerSubContent,
       preferencesDialogTitle: preferencesDialogTitle,
