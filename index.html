@@ -51,45 +51,54 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
    
     <script>
   window.consentManagerConfig = function(exports) {
-    var React = exports.React
-    var inEU = exports.inEU
+  var React = exports.React
+  var inEU = exports.inEU
 
-    var bannerContent = React.createElement(
-      'span',
-      null,
-      'We use cookies (and other similar technologies) to collect data to improve your experience on our site. By using our website, you՚re agreeing to the collection of data as described in our',
-      ' ',
-      React.createElement(
-        'a',
-        { href: '/docs/legal/website-data-collection-policy/', target: '_blank' },
-        'Website Data Collection Policy'
-      ),
-      '.'
-    )
-    var bannerSubContent = 'You can change your preferences at any time.'
-    var preferencesDialogTitle = 'Website Data Collection Preferences'
-    var preferencesDialogContent =
-      'We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site.'
-    var cancelDialogTitle = 'Are you sure you want to cancel?'
-    var cancelDialogContent =
-      'Your preferences have not been saved. By continuing to use our website, you՚re agreeing to our Website Data Collection Policy.'
-
-    return {
-      container: '#target-container',
-      writeKey: '9YlYQqs0rvHp5yLr8foZZGumJLgh8zez',
-      shouldRequireConsent: inEU,
-      bannerContent: bannerContent,
-      bannerSubContent: bannerSubContent,
-      preferencesDialogTitle: preferencesDialogTitle,
-      preferencesDialogContent: preferencesDialogContent,
-      cancelDialogTitle: cancelDialogTitle,
-      cancelDialogContent: cancelDialogContent
+  var bannerContent = React.createElement(
+    'span',
+    null,
+    'We use cookies (and other similar technologies) to collect data to improve your experience on our site. By using our website, you՚re agreeing to the collection of data as described in our',
+  ' ',
+    React.createElement(
+      'a',
+      { href: '/fr/confidentialite', target: '_blank' },
+      'Website Data Collection Policy'
+    ),
+    '.'
+  )
+  var bannerSubContent = 'You can change your preferences at any time.'
+  var preferencesDialogTitle = 'Website Data Collection Preferences'
+  var preferencesDialogContent =
+    'We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site.'
+  var cancelDialogTitle = 'Are you sure you want to cancel?'
+  var cancelDialogContent =
+    'Your preferences have not been saved. By continuing to use our website, you՚re agreeing to our Website Data Collection Policy.'
+  var customCategories = {
+    'Advertising': {
+      purpose: 'To personalize and measure the effectiveness of advertising on our site and other websites. For example, we may serve you a personalized ad based on the pages you visit on our site.',
+      integrations: ['Google Tag Manager']
     }
+  };
+
+
+  return {
+    container: '#c-cookie-consent',
+    writeKey: '9YlYQqs0rvHp5yLr8foZZGumJLgh8zez',
+    shouldRequireConsent: inEU,
+    closeBehavior: 'accept',
+    bannerContent: bannerContent,
+    bannerSubContent: bannerSubContent,
+    preferencesDialogTitle: preferencesDialogTitle,
+    preferencesDialogContent: preferencesDialogContent,
+    cancelDialogTitle: cancelDialogTitle,
+    cancelDialogContent: cancelDialogContent,
+    customCategories: customCategories
   }
+}
 </script>
 
 <script
-  src="https://unpkg.com/@segment/consent-manager@4.0.0/standalone/consent-manager.js"
+  src="https://unpkg.com/@segment/consent-manager@5.0.0/standalone/consent-manager.js"
   defer
 ></script>
   
