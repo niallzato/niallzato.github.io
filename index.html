@@ -73,16 +73,12 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
     var cancelDialogTitle = 'Are you sure you want to cancel?'
     var cancelDialogContent =
       'Your preferences have not been saved. By continuing to use our website, you՚re agreeing to our Website Data Collection Policy.'
-var closeBehavior={
-  (categories) => ({
-    advertising: false
-  })
-}
+
     
     return {
       container: '#target-container',
       writeKey: '9YlYQqs0rvHp5yLr8foZZGumJLgh8zez',
-      closeBehavior: closeBehavior,
+      closeBehavior: "accept",
       bannerContent: bannerContent,
       bannerSubContent: bannerSubContent,
       preferencesDialogTitle: preferencesDialogTitle,
@@ -94,7 +90,7 @@ var closeBehavior={
 </script>
 
 <script
-  src="https://unpkg.com/@segment/consent-manager@4.0.0/standalone/consent-manager.js"
+  src="https://unpkg.com/@segment/consent-manager@4.3.0/standalone/consent-manager.js"
   defer
 ></script>
   
