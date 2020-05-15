@@ -47,7 +47,17 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
       'We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site.'
     var cancelDialogTitle = 'Are you sure you want to cancel?'
     var cancelDialogContent =
-      'Your preferences have not been saved. By continuing to use our website, you՚re agreeing to our Website Data Collection Policy.'
+      'Your preferences have not been saved. By continuing to use our website, you՚re agreeing to our Website Data Collection Policy.';
+    var customCategories = {
+  'New Category': {
+    purpose: 'A new consent category to capture more granular consent groupings',
+    integrations: ['Google Adwords (Classic)', 'Amplitude', 'Slack']
+  },
+	      'New Category2': {
+    purpose: 'A new consent category for jusr Segment',
+    integrations: ['Segment.io']
+  }
+}
     
     return {
       container: '#target-container',
@@ -58,7 +68,8 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
       preferencesDialogTitle: preferencesDialogTitle,
       preferencesDialogContent: preferencesDialogContent,
       cancelDialogTitle: cancelDialogTitle,
-      cancelDialogContent: cancelDialogContent
+      cancelDialogContent: cancelDialogContent,
+	customCategories: customCategories
     }
   }
 </script>
