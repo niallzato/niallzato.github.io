@@ -59,6 +59,7 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 analytics.ready(function() {
     console.log(analytics.user().anonymousId());
     analytics.reset();
+	analytics.track("test");
     console.log(analytics.user().anonymousId());
     analytics.user().anonymousId('ABC-123-XYZ');
     console.log(analytics.user().anonymousId());
