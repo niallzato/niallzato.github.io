@@ -21,53 +21,6 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
         });
     }
 </script>
-
-<script src="https://unpkg.com/@segment/consent-manager@5.0.0/standalone/consent-manager.js"
-defer></script>
-
-<script>
-window.consentManagerConfig = function (exports) {
-var React = exports.React
-var inEU = exports.inEU
-
-var bannerContent = React.createElement(
-'span',
-null,
-'We use cookies (and other similar technologies) to collect data to improve your experience on our site.',
-)
-var bannerSubContent = 'You can change your preferences at any time.'
-var preferencesDialogTitle = 'Wolf & Badger Data Collection Preferences'
-var preferencesDialogContent =
-'We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, and increase the overall performance of our site.'
-var cancelDialogTitle = 'Are you sure you want to cancel?'
-var cancelDialogContent =
-'Your preferences have not been saved. By continuing to use our website, you՚re agreeing to our Website Data Collection Policy.'
-var customCategories = {
-'Event Data': {
-purpose: 'Tools used to help us understand how our site is being used and to improve it!',
-integrations: ['Keen IO', 'Visual Tagger']
-},
-'Testing': {
-purpose: 'Tools used to test out new features & copy.',
-integrations: ['Algolia']
-},
-}
-return {
-container: '#target-container',
-writeKey: '9YlYQqs0rvHp5yLr8foZZGumJLgh8zez',
-shouldRequireConsent: inEU,
-bannerContent: bannerContent,
-bannerSubContent: bannerSubContent,
-preferencesDialogTitle: preferencesDialogTitle,
-preferencesDialogContent: preferencesDialogContent,
-cancelDialogTitle: cancelDialogTitle,
-cancelDialogContent: cancelDialogContent,
-closeBehavior: 'accept',
-implyConsentOnInteraction: true,
-bannerBackgroundColor: '#000'
-}
-}
-</script>
     
     </head> 
 <body> 
@@ -108,17 +61,11 @@ bannerBackgroundColor: '#000'
     </div>
 	    
     </div>
-    <script>
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var t=analytics.methods[e];analytics[t]=analytics.factory(t)}analytics.load=function(e,t){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+e+"/analytics.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=t};analytics.SNIPPET_VERSION="4.1.0";
-  //analytics.page();
-  //analytics.setAnonymousId("PJ");
-
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var t=analytics.methods[e];analytics[t]=analytics.factory(t)}analytics.load=function(e,t){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+e+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=t};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("8lukSJzu8gMfYqDgolMRsAIemIEzXR8w");
+  analytics.page();
   }}();
-	  
-analytics.ready(function() {
-    console.log(analytics.user().anonymousId());
-});
-	    
 </script>
     </body> 
 </html>
