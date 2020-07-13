@@ -46,6 +46,14 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
     var cancelDialogTitle = 'Are you sure you want to cancel?'
     var cancelDialogContent =
       'Your preferences have not been saved. By continuing to use our website, you՚re agreeing to our Website Data Collection Policy.'
+    var initialPreferences = {Google Analytics: true,
+Intercom: false,
+Appboy: false,
+Sentry: false,
+Amplitude: false,
+Visual Tagger: false,
+HubSpot: false,
+Marketo V2: false}
 
     return {
       container: '#target-container',
@@ -56,7 +64,8 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
       preferencesDialogTitle: preferencesDialogTitle,
       preferencesDialogContent: preferencesDialogContent,
       cancelDialogTitle: cancelDialogTitle,
-      cancelDialogContent: cancelDialogContent
+      cancelDialogContent: cancelDialogContent,
+      initialPreferences: initialPreferences
     }
   }
 </script>
