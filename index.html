@@ -22,6 +22,51 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
     }
 </script>
     
+	<script>
+  window.consentManagerConfig = function(exports) {
+    var React = exports.React
+    var inEU = exports.inEU
+
+    var bannerContent = React.createElement(
+      'span',
+      null,
+      'We use cookies (and other similar technologies) to collect data to improve your experience on our site. By using our website, you՚re agreeing to the collection of data as described in our',
+      ' ',
+      React.createElement(
+        'a',
+        { href: '/docs/legal/website-data-collection-policy/', target: '_blank' },
+        'Website Data Collection Policy'
+      ),
+      '.'
+    )
+    var bannerSubContent = 'You can change your preferences at any time.'
+    var preferencesDialogTitle = 'Website Data Collection Preferences'
+    var preferencesDialogContent =
+      'We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site.'
+    var cancelDialogTitle = 'Are you sure you want to cancel?'
+    var cancelDialogContent =
+      'Your preferences have not been saved. By continuing to use our website, you՚re agreeing to our Website Data Collection Policy.'
+
+    return {
+      container: '#target-container',
+      writeKey: '9YlYQqs0rvHp5yLr8foZZGumJLgh8zez',
+      shouldRequireConsent: inEU,
+      bannerContent: bannerContent,
+      bannerSubContent: bannerSubContent,
+      preferencesDialogTitle: preferencesDialogTitle,
+      preferencesDialogContent: preferencesDialogContent,
+      cancelDialogTitle: cancelDialogTitle,
+      cancelDialogContent: cancelDialogContent
+    }
+  }
+</script>
+
+<script
+  src="https://unpkg.com/@segment/consent-manager@4.5.1/standalone/consent-manager.js"
+  defer
+></script>
+	
+	
     </head> 
 <body> 
     <div id="target-container">
@@ -63,7 +108,6 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
     </div>
 <script>
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var t=analytics.methods[e];analytics[t]=analytics.factory(t)}analytics.load=function(e,t){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+e+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=t};analytics.SNIPPET_VERSION="4.1.0";
-  analytics.load("9YlYQqs0rvHp5yLr8foZZGumJLgh8zez");
   analytics.page();
   }}();
 </script>
