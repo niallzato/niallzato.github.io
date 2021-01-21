@@ -7,7 +7,6 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
 })(window,document.documentElement,'async-hide','dataLayer',4000,
 {'OPT_CONTAINER_ID':true});
-    console.log("hfre1");
     </script>
     <title>Home Questionnaire new</span></title> 
 	
@@ -28,7 +27,7 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 <body> 
     <div id="target-container">
 
-        <form onsubmit="trackFavouriteFood()">
+        <form action="#" onsubmit="trackFavouriteFood();return false">
             Favourite Food?: <input id="favfood" type="text">
             <input type="submit">
         </form>
@@ -37,18 +36,21 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 
     <script>
         function trackFavouriteFood() {
-            var food  = document.getElementById("favfood").value();
+            var food  = document.getElementById("favfood").value;
+            console.log("food is "+food);
             analytics.track("Favourtie Food",{"food": food})
         }
 
         var SMW1 = function({ payload, next, integrations }) {
             var allowed_food = ["apples", "oranges", "mango"];
+            console.log("here");
             if (payload.obj.properties.hasOwnProperty("food") && allowed_food.includes(payload.obj.properties.food)) {
+                console.log(payload.obj);
                 next(payload);
             }
         };
-	analytics.addSourceMiddleware(SMW1);
 
+        analytics.addSourceMiddleware(SMW1);
         </script>
     </body> 
 </html>
