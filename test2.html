@@ -37,7 +37,6 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
     <script>
         function trackFavouriteFood() {
             var food  = document.getElementById("favfood").value;
-            console.log("food is "+food);
             analytics.track("Favourtie Food",{"food": food})
         }
 
@@ -45,7 +44,6 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
             var allowed_food = ["apples", "oranges", "mango"];
             console.log("here");
             if (payload.obj.properties.hasOwnProperty("food") && allowed_food.includes(payload.obj.properties.food)) {
-                console.log(payload.obj);
                 next(payload);
             }
         };
