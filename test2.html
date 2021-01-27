@@ -20,6 +20,7 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 	
 <script>
  	var test_hash = "fhfjhgfj123";
+	var allowed_food = ["apples", "oranges", "mango"];
 </script>
 	
 	
@@ -41,8 +42,6 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
         }
 
         var SMW1 = function({ payload, next, integrations }) {
-            var allowed_food = ["apples", "oranges", "mango"];
-            console.log("here");
             if (payload.obj.properties.hasOwnProperty("food") && allowed_food.includes(payload.obj.properties.food)) {
                 next(payload);
             }
