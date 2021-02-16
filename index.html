@@ -34,7 +34,7 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 
         
         <h1 id="my_custom_link">What is your favorite place to travel?</h1> 
-        <a id="click-test" href="http://niallzato.github.io"> my site</a>
+        <a onClick='analytics.track("test")' id="click-test" href="http://niallzato.github.io"> my site</a>
         <p>I am building a directory of the sweetest travel destinations.</p>
             <a href="http://www.example.com" onclick="captureOutboundLink('http://www.example.com'); return false;">Check out example.com</a>
         <form name="travel" onsubmit="identify(event)">
