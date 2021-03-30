@@ -54,6 +54,9 @@
 	    
     </div>
 <script>
+	analytics.identify("fddf",{some_val:true});
+	console.log("here " + analytics.user().traits());
+	analytics.track("some event");
 </script>
 		    
     </body> 
