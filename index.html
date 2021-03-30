@@ -56,7 +56,7 @@
 <script>
 	analytics.ready(function() {
 		analytics.identify("fddf",{some_val:true});
-		console.log("here " + analytics.user().traits());
+		console.log(analytics.user().traits());
 		analytics.track("some event");
 		});
 </script>
