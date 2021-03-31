@@ -17,11 +17,14 @@
 <iframe src="https://player.vimeo.com/video/76979871" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 <script src="https://player.vimeo.com/api/player.js"></script>
 <script>
+analytics.ready(function() {
     var iframe = document.querySelector('iframe');
     var player = new Vimeo.Player(iframe);
     var VimeoAnalytics = window.analytics.plugins.VimeoAnalytics
     var vimeoAnalytics = new VimeoAnalytics(player, '2d354fc253a165de9baccbe6cb13ed069f560773')
     vimeoAnalytics.initialize()
+	});
+
 </script>
     <div id="target-container">
     </div>
