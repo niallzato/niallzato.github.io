@@ -49,8 +49,11 @@
 		    
 <script>
 window.analytics.ready(() => {
+url = new URL(window.location.href);
+if (url.searchParams.get('reset')) {
 window.analytics.reset();
 window.Intercom('shutdown');
+}
 });
 </script>
     </body> 
