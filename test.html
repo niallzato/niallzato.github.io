@@ -47,7 +47,11 @@
 		<div id="target-container"></div>
     </div>
 		    
-	    
+<script>
+window.analytics.ready(() => {
+window.analytics.reset();
+window.Intercom('shutdown');
+});
 </script>
     </body> 
 </html>
