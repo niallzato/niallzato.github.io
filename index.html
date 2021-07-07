@@ -17,6 +17,13 @@
 });
   analytics.page();
   }}();
+	var SMW1 = function({ payload, next, integrations }) {
+	console.log("payload is: " payload);
+	next(payload);
+	};
+	
+	analytics.addSourceMiddleware(SMW1);
+
 </script>
 	
 <script>
