@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<html> 
+<head> 	
+    </head> 
+<body> 
+	
+<iframe src="https://player.vimeo.com/video/76979871" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="9YlYQqs0rvHp5yLr8foZZGumJLgh8zez";analytics.SNIPPET_VERSION="4.13.2";
+  analytics.load("9YlYQqs0rvHp5yLr8foZZGumJLgh8zez");
+  analytics.page();
+  }}();
+</script>
+	
+<script>
+analytics.ready(function() {
+    var oldID= '1d5cf022170856e315944f873e1ec055';
+    var iframe = document.querySelector('iframe');
+    var player = new Vimeo.Player(iframe);
+    //var VimeoAnalytics = window.analytics.plugins.VimeoAnalytics
+    //var vimeoAnalytics = new VimeoAnalytics(player, '1d5cf022170856e315944f873e1ec055')
+    //vimeoAnalytics.initialize()
+ });
+
+</script>
+    <div id="target-container">
+    </div>
+    <div>
+	    
+
+        
+        <h1 id="my_custom_link">What is your favorite place to travel?</h1> 
+        <a onClick='analytics.track("test")' id="click-test" href="http://niallzato.github.io"> my site</a>
+        <p>I am building a directory of the sweetest travel destinations.</p>
+            <a href="http://www.example.com" onclick="captureOutboundLink('http://www.example.com'); return false;">Check out example.com</a>
+        <form name="travel" onsubmit="identify(event)">
+             What is your favorite travel destination?
+            <input name="destination" required="" size="81" type="text"/> 
+            <br><br><br> 
+            Any recommendations (cool things to do, places to visit or restaurants to eat)? 
+            <br><br> 
+            <textarea cols="81" name="details" required="" rows="10">
+            </textarea> 
+            <br><br> 
+            Name: <input name="fullname" required="" size="75" type="text"/> 
+            <br><br> 
+            Email: <input name="email" required="" size="75" type="email"/> 
+            <br><br>
+            <input name="submit" type="submit" value="submit"/>
+        </form> 
+	    
+	    <button onclick="myFunction()">Click me</button>
+	    
+	    <div class="footer-content">
+        <ul>
+        <li><a id="testlink" class="footer-content-item" href="/amenities">AMENITIES</a></li>
+        <li><a class="footer-content-item" href="/floorplan">FLOORPLANS</a></li>
+       <li><a class="footer-content-item" href="/neighborhood">NEIGHBORHOOD</a></li>
+        <li><a class="footer-content-item" href="/scheduletour">SCHEDULE A TOUR</a></li>
+        <li><a class="footer-content-item" href="/contact">CONTACT</a></li>
+        <ul>
+    </div>
+	    
+    </div>	    	    
+<script>
+	
+</script>
+		    
+    </body> 
+</html>
