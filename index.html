@@ -21,6 +21,17 @@ analytics.ready(function() {
     //var VimeoAnalytics = window.analytics.plugins.VimeoAnalytics
     //var vimeoAnalytics = new VimeoAnalytics(player, '1d5cf022170856e315944f873e1ec055')
     //vimeoAnalytics.initialize()
+	
+var SMW1 = function({ payload, next, integrations }) {
+	if (payload.obj.event == "test") {
+	console.log("do not send")
+	return     
+	}
+	console.log("send")
+	next(payload);
+};
+
+analytics.addSourceMiddleware(SMW1);
  });
 
 </script>
