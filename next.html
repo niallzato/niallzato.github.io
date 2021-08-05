@@ -15,24 +15,26 @@
 	
 <script>
 analytics.ready(function() {
-    var oldID= '1d5cf022170856e315944f873e1ec055';
-    var iframe = document.querySelector('iframe');
-    var player = new Vimeo.Player(iframe);
-    //var VimeoAnalytics = window.analytics.plugins.VimeoAnalytics
-    //var vimeoAnalytics = new VimeoAnalytics(player, '1d5cf022170856e315944f873e1ec055')
-    //vimeoAnalytics.initialize()
+//     var oldID= '1d5cf022170856e315944f873e1ec055';
+//     var iframe = document.querySelector('iframe');
+//     var player = new Vimeo.Player(iframe);
+//     //var VimeoAnalytics = window.analytics.plugins.VimeoAnalytics
+//     //var vimeoAnalytics = new VimeoAnalytics(player, '1d5cf022170856e315944f873e1ec055')
+//     //vimeoAnalytics.initialize()
 	
 	
-var SMW1 = function({ payload, next, integrations }) {
-	if (payload.obj.event == "test") {
-	console.log("do not send")
-	return     
-	}
-	console.log("send")
-	next(payload);
-};
+// var SMW1 = function({ payload, next, integrations }) {
+// 	if (payload.obj.event == "test") {
+// 	console.log("do not send")
+// 	return     
+// 	}
+// 	console.log("send")
+// 	next(payload);
+// };
 
-analytics.addSourceMiddleware(SMW1);
+// analytics.addSourceMiddleware(SMW1);
+	
+	analytics.debug("true")
 	
  });
 
@@ -74,10 +76,11 @@ analytics.addSourceMiddleware(SMW1);
         <li><a class="footer-content-item" href="/contact">CONTACT</a></li>
         <ul>
     </div>
-	    
+	    <button onclick="segTrack()">Send Segment event</button>
+
     </div>	    	    
 <script>
-	
+	function segTrack() {analytics.track("button event")};
 </script>
 		    
     </body> 
