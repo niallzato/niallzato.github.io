@@ -12,12 +12,11 @@
   analytics.page();
   console.log(analytics.user().anonymousId());
   }}();
-  console.log("post load");
-  console.log(analytics.user().anonymousId());</script>
+</script>
 	
 <script>
 console.log("pre-ready");	
-// analytics.ready(function() {
+analytics.ready(function() {
 //     var oldID= '1d5cf022170856e315944f873e1ec055';
 //     var iframe = document.querySelector('iframe');
 //     var player = new Vimeo.Player(iframe);
@@ -28,8 +27,10 @@ console.log("pre-ready");
 // var link = document.getElementById('free-trial-link');
 
 // analytics.track("test-123");
-// console.log("in ready block");
-//  });
+	console.log("in ready block");
+	console.log(analytics.user().anonymousId());	
+
+ });
 
 </script>
     <div id="target-container">
