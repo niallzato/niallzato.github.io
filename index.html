@@ -14,6 +14,7 @@
 </script>
 	
 <script>
+  analytics.track("pre-ready");	
 console.log("pre-ready");	
 analytics.ready(function() {
     var oldID= '1d5cf022170856e315944f873e1ec055';
@@ -22,7 +23,6 @@ analytics.ready(function() {
     var VimeoAnalytics = window.analytics.plugins.VimeoAnalytics
     var vimeoAnalytics = new VimeoAnalytics(player, '1d5cf022170856e315944f873e1ec055')
     vimeoAnalytics.initialize()
-	
  });
 
 </script>
