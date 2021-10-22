@@ -14,8 +14,8 @@
         });
 	
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="9YlYQqs0rvHp5yLr8foZZGumJLgh8zez";analytics.SNIPPET_VERSION="4.13.2";
-  //analytics.load("9YlYQqs0rvHp5yLr8foZZGumJLgh8zez");
-  //analytics.page();
+  analytics.load("9YlYQqs0rvHp5yLr8foZZGumJLgh8zez");
+  analytics.page();
   }}();
 </script>
 	
@@ -34,37 +34,6 @@ analytics.ready(function() {
 	counter++;	
 	}, 1000);
 </script>
-
-	<script type="text/javascript">
-(function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
-;r.type="text/javascript"
-;r.integrity="sha384-tzcaaCH5+KXD4sGaDozev6oElQhsVfbJvdi3//c2YvbY02LrNlbpGdt3Wq4rWonS"
-;r.crossOrigin="anonymous";r.async=true
-;r.src="https://cdn.amplitude.com/libs/amplitude-8.5.0-min.gz.js"
-;r.onload=function(){if(!e.amplitude.runQueuedFunctions){
-console.log("[Amplitude] Error: could not load SDK")}}
-;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
-;function s(e,t){e.prototype[t]=function(){
-this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
-var o=function(){this._q=[];return this}
-;var a=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove"]
-;for(var c=0;c<a.length;c++){s(o,a[c])}n.Identify=o;var u=function(){this._q=[]
-;return this}
-;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
-;for(var p=0;p<l.length;p++){s(u,l[p])}n.Revenue=u
-;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","enableTracking","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","groupIdentify","onInit","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"]
-;function v(e){function t(t){e[t]=function(){
-e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
-for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
-e=(!e||e.length===0?"$default_instance":e).toLowerCase()
-;if(!Object.prototype.hasOwnProperty.call(n._iq,e)){n._iq[e]={_q:[]};v(n._iq[e])
-}return n._iq[e]};e.amplitude=n})(window,document);
-
-  amplitude.getInstance().init("d0be4caa65a807d5cbce56f5d61f50e3", null, {
-    includeReferrer: true,
-    saveParamsReferrerOncePerSession: false
-  });
-	</script>	
 	
     <div id="target-container">
     </div>
