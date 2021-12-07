@@ -43,7 +43,7 @@ exponentialBackoff(segmentReady, 10, 100, function(result) {
 function exponentialBackoff(toTry, max, delay, callback) {
     console.log('max',max,'next delay',delay);
     var result = toTry();
-    
+    console.log(result);
     if (result) {
 	myanon = analytics.user().anonymousId();
         callback(result);
