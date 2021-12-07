@@ -31,6 +31,8 @@
 	counter++;	
 	}, 1000);
 	
+var myanon;	
+	
 exponentialBackoff(segmentReady, 10, 100, function(result) {
     console.log('the result is',result);
 });
@@ -43,6 +45,7 @@ function exponentialBackoff(toTry, max, delay, callback) {
     var result = toTry();
     
     if (result) {
+	myanon = analytics.user().anonymousId();
         callback(result);
     } else {
         if (max > 0) {
