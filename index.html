@@ -60,7 +60,7 @@ function exponentialBackoff(toTry, max, delay, callback) {
 }
 
 function segmentReady() {
-    return analytics.user() !== 'undefined'
+    return typeof analytics.user === 'function'
 }
 		
 </script>
