@@ -1,15 +1,22 @@
-name: Webhook Action
+# This is a basic workflow that is manually triggered
+name: Test reminder
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI or API.
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    branches: [ master ]
-  # You may pin to the exact commit or the version.
-  # uses: joelwmale/webhook-action@6f6298309b7aa21dc601d8c6271e0be055ce6f0e
-uses: joelwmale/webhook-action@2.1.0
-with:
-# The url to send the webhook event to
-  url:  'https://webhook.site/76f2c5ea-56e4-469f-84af-84e6837316e5'
-  # Additional headers to send alongside the defaults
-  # The data sent to the webhook
-  body: '{"event": "deployment", "repository": "joelwmale/webhook-action"}'
-  # Enables calling to known self-signed or invalid SSL certificates
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  pull_request:
+    branches: [ main ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+    my_first_job:
+      runs-on: ubuntu-latest
+      # Steps represent a sequence of tasks that will be executed as part of the job
+      steps:
+      - name: Invoke deployment hook
+        uses: distributhor/workflow-webhook@v2
+        env:
+          webhook_url: 'https://webhook.site/#!/76f2c5ea-56e4-469f-84af-84e6837316e5'
+          webhook_secret: '12'
+          data: '{ "weapon": "hammer", "drink" : "beer" }'
