@@ -94,45 +94,22 @@ function segmentReady() {
 	    
     </script>
 	
-    <div>
 	    
-<a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+<h2>Segment Button Click Tracking Example</h2>
+<!-- Button you want to track -->
+<button id="trackButton">Click Me</button>
 
-        
-        <h1 id="my_custom_link">What is your favorite place to travel?</h1> 
-        <a onClick='analytics.track("test")' id="click-test" href="http://niallzato.github.io"> my site</a>
-        <p>I am building a directory of the sweetest travel destinations.</p>
-            <a href="http://www.example.com" onclick="captureOutboundLink('http://www.example.com'); return false;">Check out example.com</a>
-        <form name="travel" onsubmit="identify(event)">
-             What is your favorite travel destination?
-            <input name="destination" required="" size="81" type="text"/> 
-            <br><br><br> 
-            Any recommendations (cool things to do, places to visit or restaurants to eat)? 
-            <br><br> 
-            <textarea cols="81" name="details" required="" rows="10">
-            </textarea> 
-            <br><br> 
-            Name: <input name="fullname" required="" size="75" type="text"/> 
-            <br><br> 
-            Email: <input name="email" required="" size="75" type="email"/> 
-            <br><br>
-            <input name="submit" type="submit" value="submit"/>
-        </form> 
-	    
-	    <button id="my_custom_link">Click me</button>
-	    <a href="https://niallzato.github.io/redirect.html" id="free-trial-link">redirect</a>
-	    
-	    <div class="footer-content">
-        <ul>
-        <li><a id="testlink" class="footer-content-item" href="/amenities">AMENITIES</a></li>
-        <li><a class="footer-content-item" href="/floorplan">FLOORPLANS</a></li>
-       <li><a class="footer-content-item" href="/neighborhood">NEIGHBORHOOD</a></li>
-        <li><a class="footer-content-item" href="/scheduletour">SCHEDULE A TOUR</a></li>
-        <li><a class="footer-content-item" href="/contact">CONTACT</a></li>
-        <ul>
-    </div>
-	    
-    </div>	    	    
+<script type="text/javascript">
+    // JavaScript to track button click
+    document.getElementById('trackButton').addEventListener('click', function() {
+        analytics.track('Button Clicked', {
+            category: 'Engagement',
+            label: 'Track Button',
+            value: 1
+        });
+    });
+</script>
+	        	    
 		    
     </body> 
 </html>
