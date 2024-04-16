@@ -93,13 +93,35 @@ function segmentReady() {
 //       })}
 	    
     </script>
-	
+
+    <h2>User Identification Form</h2>
+    <form onsubmit="return identifyUser()">
+        <label for="userId">User ID:</label><br>
+        <input type="text" id="userId" name="userId"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Identify User">
+    </form>
 	    
 <h2>Segment Button Click Tracking Example</h2>
 <!-- Button you want to track -->
 <button id="trackButton">Click Me</button>
 
 <script type="text/javascript">
+	        function identifyUser() {
+            var userId = document.getElementById('userId').value;
+            if (userId) {
+                analytics.identify(userId, {
+                    // Add any additional traits here
+                    email: document.getElementById('email').value
+                });
+                alert('User identified with userId: ' + userId);
+            } else {
+                alert('Please enter a userId.');
+            }
+            // Prevent form submission for demonstration purposes
+            return false;
+        }
     // JavaScript to track button click
     document.getElementById('trackButton').addEventListener('click', function() {
         analytics.track('Button Clicked', {
