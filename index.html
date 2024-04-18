@@ -100,6 +100,8 @@ function segmentReady() {
         <input type="text" id="userId" name="userId"><br>
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email"><br><br>
+	<label for="phone">Phone:</label><br>
+	<input type="text" id="phone" name="phone"><br>
         <input type="submit" value="Identify User">
     </form>
 	    
@@ -113,7 +115,9 @@ function segmentReady() {
             if (userId) {
                 analytics.identify(userId, {
                     // Add any additional traits here
-                    email: document.getElementById('email').value
+                    email: document.getElementById('email').value,
+		    phone: document.getElementById('phone').value
+
                 });
                 alert('User identified with userId: ' + userId);
             } else {
