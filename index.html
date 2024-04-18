@@ -119,10 +119,13 @@ function segmentReady() {
 		    phone: document.getElementById('phone').value
 
                 });
-                alert('User identified with userId: ' + userId);
             } else {
-                alert('Please enter a userId.');
-            }
+                analytics.identify({
+                    // Add any additional traits here
+                    email: document.getElementById('email').value,
+		    phone: document.getElementById('phone').value
+                });
+	    }
             // Prevent form submission for demonstration purposes
             return false;
         }
