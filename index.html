@@ -60,6 +60,7 @@ function checkQueryString(url) {
     });
 
     analytics.addDestinationMiddleware('Segment.io', ({ payload, next, integration }) => {
+            console.log("in dmw2.1");
     if(checkQueryString(payload.obj.context.page.url)) {
         payload.obj.traits.name = "new2"; //or strip certain values
         console.log("in dmw2");
