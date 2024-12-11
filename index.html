@@ -49,6 +49,23 @@ if(checkQueryString(payload.obj.context.page.url)) {
 };
 analytics.addSourceMiddleware(dropContext);
     analytics.page();
+
+analytics.addDestinationMiddleware('Intercom Web (Actions)', ({ payload, next, integration }) => {
+if(checkQueryString(payload.obj.context.page.url)) {
+   payload.obj.traits.name = "new"; //or strip certain values
+   console.log("in dmw1");
+};
+next(payload);
+};
+
+analytics.addDestinationMiddleware('Segment.io', ({ payload, next, integration }) => {
+if(checkQueryString(payload.obj.context.page.url)) {
+   payload.obj.traits.name = "new2"; //or strip certain values
+   console.log("in dmw2");
+};
+next(payload);
+};
+																								     
   }}();
 </script>
 	
